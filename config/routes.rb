@@ -9,10 +9,11 @@ Rails.application.routes.draw do
 
   resources :comments
 
-  resources :favorites, only: [:create, :destroy]
+
 
   resources :users, only: [:index, :show]
   resources :posts, only: [:index, :show, :create]
+   resources :favorites, only: [:create, :destroy]
 
   root 'posts#index'
 
