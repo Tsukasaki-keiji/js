@@ -25,6 +25,6 @@ class FavoritesController < ApplicationController
   def post_params
     params.require(:post).permit(:content)
   end
-  end
+
 
 end
