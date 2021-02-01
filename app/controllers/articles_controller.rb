@@ -3,6 +3,9 @@ class ArticlesController < ApplicationController
 
   def index
     @article = Article.all
+    if params[:tag_name]
+      @tasks = Task.tagged_with("#{params[:tag_name]}")
+    end
   end
 
   def show
